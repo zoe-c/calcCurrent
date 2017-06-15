@@ -29,6 +29,7 @@ form, button, output{
    background-color: #63B546;
    color: white;
    font-size: 3vw;
+   /*font-family: sans-serif;*/
    font-weight: lighter;
    /*border: solid calc(1px) white;*/
    border: none;
@@ -42,7 +43,6 @@ form, button, output{
    flex-flow: wrap row;
    background-color: white;
    justify-content:space-around;
-   /*justify-content: center;*/
 }
 
 button {
@@ -62,6 +62,7 @@ output {
    width: 30.2vw;
    height: 10vw;
    position: relative;
+   font-family: sans-serif;
 }
 
 .op {

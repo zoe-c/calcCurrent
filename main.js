@@ -26,6 +26,7 @@ var nums = document.getElementsByClassName('num');
 var results = document.getElementsByClassName('results');
 var ops = document.getElementsByClassName('op');
 var clear = document.getElementById('clear');
+var equal = document.getElementById('bcalc');
 // ^HOW DID THIS AUTOMATICALLY WORK? AMAZING.
 
 // ************tests****************
@@ -55,11 +56,21 @@ var tempNumber = "";
       op.addEventListener('click', function opPrint(event){
          tempNumber += event.target.value;
          results[0].value = tempNumber;
-   //   results.innerHTML = tempNumber;
          console.log(tempNumber);
       });
       console.log(tempNumber);
    }
+
+   equal[0].addEventListener('click', function calcTotal(event){
+      let total;
+      total = eval(parseInt(tempNumber));
+      tempNumber = total;
+      results[0].value = tempNumber; 
+      return tempNumber;
+
+
+      console.log(total);
+   });
 
    // function (){
    //    let display = results.innerHTML() = o
