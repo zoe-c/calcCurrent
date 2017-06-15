@@ -29,9 +29,10 @@ var clear = document.getElementById('clear');
 // ^HOW DID THIS AUTOMATICALLY WORK? AMAZING.
 
 // ************tests****************
-// console.log(nums);
-// console.log(results);
-// console.log(ops);
+console.log(nums);
+console.log(results);
+console.log(ops);
+console.log(clear);
 
 //this string will be your "bank"// holds your values until concatenation or calculation
 var tempNumber = "";
@@ -39,26 +40,32 @@ var tempNumber = "";
 
 
 //assignEventListeners
-for(var num of nums) {
-  num.addEventListener('click', function numPrint(event){
-     tempNumber += event.target.value;
-     results.value = tempNumber;
-   //   results.innerHTML = tempNumber;
-     console.log(tempNumber);
- });
- console.log(tempNumber);
-}
 
-for(var op of ops) {
-  op.addEventListener('click', function opPrint(event){
-     tempNumber += event.target.value;
-     results.value = tempNumber;
-   //   results.innerHTML = tempNumber;
-     console.log(tempNumber);
- });
- console.log(tempNumber);
-}
+// function eventListeners(){
+   for(var num of nums) {
+      num.addEventListener('click', function numPrint(event){
+         tempNumber += event.target.value;
+         results[0].value = tempNumber;
+         console.log(tempNumber);
+      });
+      console.log(tempNumber);
+   }
 
+   for(var op of ops) {
+      op.addEventListener('click', function opPrint(event){
+         tempNumber += event.target.value;
+         results[0].value = tempNumber;
+   //   results.innerHTML = tempNumber;
+         console.log(tempNumber);
+      });
+      console.log(tempNumber);
+   }
+
+   // function (){
+   //    let display = results.innerHTML() = o
+   // }
+
+// }
 // for
 
 // function numPrint(event) {

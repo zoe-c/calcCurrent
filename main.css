@@ -25,7 +25,7 @@ body {
    align-items: center;
 }
 
-form, button, div{
+form, button, output{
    background-color: #63B546;
    color: white;
    font-size: 3vw;
@@ -57,7 +57,7 @@ button:hover {
    font-style:italic;
 }
 
-div {
+output {
    display: inline;
    width: 30.2vw;
    height: 10vw;
