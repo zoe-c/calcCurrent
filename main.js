@@ -1,3 +1,4 @@
+//cmd ctrl arrows : to move shit up and down lines without having to cut and paste
 
 //*******// store number strings in an array. / this is a nodelist
 // var nodeList = document.querySelectorAll('.num');
@@ -21,9 +22,8 @@
 /*}*/
 
 
-//grab elements and store them in variables
+//global vars to top*********************************
 var nums = document.getElementsByClassName('num');
-// var results = document.getElementsByClassName('results');
 var result = document.getElementById('result');
 var ops = document.getElementsByClassName('op');
 var clear = document.getElementById('clear');
@@ -31,25 +31,23 @@ var equal = document.getElementById('bcalc');
 var dec = document.getElementById('bdec');
 // ^HOW DID THIS AUTOMATICALLY WORK? AMAZING.
 
-// ************tests****************
+//result containers**********************************
+var tempResult= [];
+var endResult= [];
+
+//************tests**********************************
 console.log(nums);
 console.log(result);
 console.log(ops);
 console.log(clear);
 console.log(equal);
 console.log(dec);
-//this string will be your "bank"// holds your values until concatenation or calculation
-// var tempNumber = "";
-var tempResult= [];
-var endResult= [];
 
-// var numToCalc=[];
-// var opToCalc=[];
+
 
 
 //assignEventListeners
 
-// function eventListeners(){
    for(var num of nums) {
       num.addEventListener('click', function numPrint(event){
          tempResult += event.target.value;
@@ -80,65 +78,6 @@ var endResult= [];
          console.log(endResult);
    });
 
-
-
-   // function sortResults(tempResult){
-   //    let i = tempResult[i];
-   //    let j = tempResult[i++]
-   //    tempResult.map([i,j]){
-   //       if (tempResult[i] == "-" || tempResult[i] == "+" || tempResult[i] == "/" || tempResult[i] == "*") {
-   //          opToCalc.push(tempResult[i]);
-   //       }
-   //    }
-   //
-   //    )
-   // }
-
-
-
-
-
-
-
-   // equal.addEventListener('click', function calcTotal(event){
-   //    eval(tempNumber);
-   //    tempNumber;
-   //    console.log(total);
-   // });
-
-
-
-
-
-//adam: stored ops clicked in one array and nums clicked in a different.
-// he then has an array that he combines these two in when equal is clicked.... then iterates through when the equal is clicked... to calculate.
-
-
-   // function (){
-   //    let display = results.innerHTML() = o
-   // }
-
-// }
-// for
-
-// function numPrint(event) {
-//   tempNumber += event.target.value;
-//   results.value = tempNumber;
-//   console.log(tempNumber);
-// }
-
-// WHY WONT THIS DISPLAY WORK AHHHHHHHHH
-// function assignResultsDisplay(){
-//    results.textContent = tempNumber;
-//    return(results);
-// }
-
-//   //the last part of this event clears out the display field. this is not the same in the wk3 project.. but is IRL
-// document.getElementsById('add').addEventListener('click', function() {
-//  op= '+';
-//   total += parseInt(tempNumber);
-//   tempNumber = "";
-// });
 
 
 //store op strings in an array
