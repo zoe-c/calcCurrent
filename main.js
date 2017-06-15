@@ -39,10 +39,10 @@ console.log(equal);
 //this string will be your "bank"// holds your values until concatenation or calculation
 // var tempNumber = "";
 var tempResult= [];
-var endResult;
+var endResult= [];
 
-var numToCalc=[];
-var opToCalc=[];
+// var numToCalc=[];
+// var opToCalc=[];
 
 
 //assignEventListeners
@@ -66,9 +66,38 @@ var opToCalc=[];
       // console.log(tempNumber);
    }
 
-   function sortResults(tempResult){
-      tempResult.map()
-   }
+   equal.addEventListener('click', function (event){
+         // endResult= eval(tempResult.join(''));
+         endResult= eval(tempResult);
+         result.value = endResult;
+         tempResult = [];
+         console.log(endResult);
+
+
+         // endResult = eval(tempResult);
+         // result.value = endResult;
+         // console.log(endResult);
+   });
+
+
+
+   // function sortResults(tempResult){
+   //    let i = tempResult[i];
+   //    let j = tempResult[i++]
+   //    tempResult.map([i,j]){
+   //       if (tempResult[i] == "-" || tempResult[i] == "+" || tempResult[i] == "/" || tempResult[i] == "*") {
+   //          opToCalc.push(tempResult[i]);
+   //       }
+   //    }
+   //
+   //    )
+   // }
+
+
+
+
+
+
 
    // equal.addEventListener('click', function calcTotal(event){
    //    eval(tempNumber);
