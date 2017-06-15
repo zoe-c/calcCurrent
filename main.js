@@ -1,28 +1,4 @@
-//cmd ctrl arrows : to move shit up and down lines without having to cut and paste
-
-//*******// store number strings in an array. / this is a nodelist
-// var nodeList = document.querySelectorAll('.num');
-//    console.log(nodeList);
-//
-// function numStrings(){
-//    let numStringArray = [];
-//    for (var i = 0; i <= nodeList.length - 1; i++) {
-//       numStringArray.push(nodeList[i].value);
-//    }
-//    return numStringArray;
-//    // nodeList.forEach(numSrtingArray.push([0].value));
-//    // return numStringArray;
-//
-//    console.log(numStringArray);
-// }
-//
-// numStrings();
-
-/*document.getElementsByClassName('num').addEventListener('click', function(event) {*/
-/*}*/
-
-
-//global vars to top*********************************
+//global vars *********************************
 var nums = document.getElementsByClassName('num');
 var result = document.getElementById('result');
 var ops = document.getElementsByClassName('op');
@@ -36,15 +12,12 @@ var tempResult= [];
 var endResult= [];
 
 //************tests**********************************
-console.log(nums);
-console.log(result);
-console.log(ops);
-console.log(clear);
-console.log(equal);
-console.log(dec);
-
-
-
+// console.log(nums);
+// console.log(result);
+// console.log(ops);
+// console.log(clear);
+// console.log(equal);
+// console.log(dec);
 
 //assignEventListeners
 
@@ -77,14 +50,3 @@ console.log(dec);
          tempResult = [];
          console.log(endResult);
    });
-
-
-
-//store op strings in an array
-
-//add Event Listeners to number buttons
-
-//add event listeners to op buttons
-
-
-//add event listener to = to calculate and push to the display
