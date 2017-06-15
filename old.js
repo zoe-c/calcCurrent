@@ -1,3 +1,16 @@
+// 
+// varfirstNumber= "";
+// total.eval(firstNumber);
+// //print to output
+
+
+
+
+
+
+
+
+
 // //buttons into "nodeList"********KEEP THIS. STEP 1 OF VALUE EXTRACTION************************
 // var nodeList = document.querySelectorAll('.button');
 // console.log(nodeList);

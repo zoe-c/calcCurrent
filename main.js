@@ -23,7 +23,8 @@
 
 //grab elements and store them in variables
 var nums = document.getElementsByClassName('num');
-var results = document.getElementsByClassName('results');
+// var results = document.getElementsByClassName('results');
+var result = document.getElementById('result');
 var ops = document.getElementsByClassName('op');
 var clear = document.getElementById('clear');
 var equal = document.getElementById('bcalc');
@@ -31,13 +32,17 @@ var equal = document.getElementById('bcalc');
 
 // ************tests****************
 console.log(nums);
-console.log(results);
+console.log(result);
 console.log(ops);
 console.log(clear);
-
+console.log(equal);
 //this string will be your "bank"// holds your values until concatenation or calculation
-var tempNumber = "";
+// var tempNumber = "";
+var tempResult= [];
+var endResult;
 
+var numToCalc=[];
+var opToCalc=[];
 
 
 //assignEventListeners
@@ -45,32 +50,39 @@ var tempNumber = "";
 // function eventListeners(){
    for(var num of nums) {
       num.addEventListener('click', function numPrint(event){
-         tempNumber += event.target.value;
-         results[0].value = tempNumber;
-         console.log(tempNumber);
+         tempResult += event.target.value;
+         result.value = tempResult;
+         console.log(tempResult);
       });
-      console.log(tempNumber);
+      // console.log(tempNumber);
    }
 
    for(var op of ops) {
       op.addEventListener('click', function opPrint(event){
-         tempNumber += event.target.value;
-         results[0].value = tempNumber;
-         console.log(tempNumber);
+         tempResult += event.target.value;
+         result.value = tempResult;
+         console.log(tempResult);
       });
-      console.log(tempNumber);
+      // console.log(tempNumber);
    }
 
-   equal[0].addEventListener('click', function calcTotal(event){
-      let total;
-      total = eval(parseInt(tempNumber));
-      tempNumber = total;
-      results[0].value = tempNumber; 
-      return tempNumber;
+   function sortResults(tempResult){
+      tempResult.map()
+   }
+
+   // equal.addEventListener('click', function calcTotal(event){
+   //    eval(tempNumber);
+   //    tempNumber;
+   //    console.log(total);
+   // });
 
 
-      console.log(total);
-   });
+
+
+
+//adam: stored ops clicked in one array and nums clicked in a different.
+// he then has an array that he combines these two in when equal is clicked.... then iterates through when the equal is clicked... to calculate.
+
 
    // function (){
    //    let display = results.innerHTML() = o
