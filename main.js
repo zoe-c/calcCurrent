@@ -28,6 +28,7 @@ var result = document.getElementById('result');
 var ops = document.getElementsByClassName('op');
 var clear = document.getElementById('clear');
 var equal = document.getElementById('bcalc');
+var dec = document.getElementById('bdec');
 // ^HOW DID THIS AUTOMATICALLY WORK? AMAZING.
 
 // ************tests****************
@@ -36,6 +37,7 @@ console.log(result);
 console.log(ops);
 console.log(clear);
 console.log(equal);
+console.log(dec);
 //this string will be your "bank"// holds your values until concatenation or calculation
 // var tempNumber = "";
 var tempResult= [];
@@ -54,7 +56,6 @@ var endResult= [];
          result.value = tempResult;
          console.log(tempResult);
       });
-      // console.log(tempNumber);
    }
 
    for(var op of ops) {
@@ -63,8 +64,13 @@ var endResult= [];
          result.value = tempResult;
          console.log(tempResult);
       });
-      // console.log(tempNumber);
    }
+
+   dec.addEventListener('click', function decPrint(event){
+      tempResult += event.target.value;
+      result.value = tempResult;
+      console.log(tempResult);
+   })
 
    equal.addEventListener('click', function (event){
          // endResult= eval(tempResult.join(''));
@@ -72,11 +78,6 @@ var endResult= [];
          result.value = endResult;
          tempResult = [];
          console.log(endResult);
-
-
-         // endResult = eval(tempResult);
-         // result.value = endResult;
-         // console.log(endResult);
    });
 
 
