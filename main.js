@@ -5,11 +5,14 @@ var ops = document.getElementsByClassName('op');
 var clear = document.getElementById('clear');
 var equal = document.getElementById('bcalc');
 var dec = document.getElementById('bdec');
-// ^HOW DID THIS AUTOMATICALLY WORK? AMAZING.
 
 //result containers**********************************
 var tempResult= [];
 var endResult= [];
+
+//hardmodeVAR/ mod n sqrt*******************************
+var mod = document.getElementById('bmod');
+var sqr = document.getElementById('bsqr');
 
 //************tests**********************************
 // console.log(nums);
@@ -18,11 +21,13 @@ var endResult= [];
 // console.log(clear);
 // console.log(equal);
 // console.log(dec);
+// console.log(mod);
+// console.log(sqr);
 
-//assignEventListeners
+// assignEventListeners
 
    for(var num of nums) {
-      num.addEventListener('click', function numPrint(event){
+      num.addEventListener('click', function numPrint(event) {
          tempResult += event.target.value;
          result.value = tempResult;
          console.log(tempResult);
@@ -30,23 +35,38 @@ var endResult= [];
    }
 
    for(var op of ops) {
-      op.addEventListener('click', function opPrint(event){
+      op.addEventListener('click', function opPrint(event) {
          tempResult += event.target.value;
          result.value = tempResult;
          console.log(tempResult);
       });
    }
 
-   dec.addEventListener('click', function decPrint(event){
+   dec.addEventListener('click', function decPrint(event) {
       tempResult += event.target.value;
       result.value = tempResult;
       console.log(tempResult);
-   })
+   });
 
-   equal.addEventListener('click', function (event){
-         // endResult= eval(tempResult.join(''));
+// hardmodeFUNCS attempt********************
+
+   mod.addEventListener('click', function modulo(event) {
+      tempResult += event.target.value;
+      result.value = tempResult;
+      console.log(tempResult);
+   });
+
+   sqr.addEventListener('click', function squareRoot(event) {
+      let sRoot = Math.sqrt(eval(tempResult));
+      tempResult = sRoot;
+      result.value = tempResult;
+      tempResult = [];
+      console.log(sRoot);
+   });
+
+   equal.addEventListener('click', function (event) {
          endResult= eval(tempResult);
-         result.value = endResult;
-         tempResult = [];
+         tempResult = endResult;
+         result.value = tempResult;
          console.log(endResult);
    });

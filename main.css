@@ -5,7 +5,6 @@
 * {
   margin: 0;
   padding: 0;
-  /*border: 0;*/
   font-size: 100%;
   vertical-align: baseline;
   background: transparent;
@@ -25,20 +24,22 @@ body {
    align-items: center;
 }
 
-form, button, output{
+form, button, output {
    background-color: #63B546;
    color: white;
    font-size: 3vw;
-   /*font-family: sans-serif;*/
    font-weight: lighter;
-   /*border: solid calc(1px) white;*/
    border: none;
+}
+
+button, output, div {
+   border: solid calc(1px) white;
 }
 
 .calculator {
    position: relative;
    width: 40.45vw;
-   height: 50.5vw;
+   height: 60.5vw;
    display: flex;
    flex-flow: wrap row;
    background-color: white;
@@ -54,7 +55,14 @@ button {
 button:hover {
    transition: all 0.3s ease 0s;
    background-color: #95C984;
-   font-style:italic;
+   font-weight: 500;
+   /*font-size: 4vw;*/
+}
+
+button:focus {
+   outline: none;
+   transform: rotateY(180deg);
+   /*background-color: slategray;*/
 }
 
 output {
@@ -67,6 +75,13 @@ output {
    justify-content: center;
    align-items: center;
    overflow-x: scroll;
+}
+
+#filler {
+   position: relative;
+   width: 20.12vw;
+   height: 10vw;
+   background-color: #63B546;
 }
 
 .op {
