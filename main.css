@@ -32,7 +32,7 @@ form, button, output {
    border: none;
 }
 
-button, output, div {
+button, output {
    border: solid calc(1px) white;
 }
 
@@ -81,7 +81,14 @@ output {
    position: relative;
    width: 20.12vw;
    height: 10vw;
-   background-color: #63B546;
+   color: #95C984;
+   background-color: white;
+   font-size: 8vw;
+   text-align: center;
+}
+
+#filler:hover {
+   font-size: 7.4vw;
 }
 
 .op {

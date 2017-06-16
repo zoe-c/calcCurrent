@@ -65,8 +65,8 @@ var sqr = document.getElementById('bsqr');
    });
 
    equal.addEventListener('click', function (event) {
-         endResult= eval(tempResult);
-         tempResult = endResult;
-         result.value = tempResult;
-         console.log(endResult);
+      endResult= eval(tempResult);
+      tempResult = endResult;
+      result.value = tempResult;
+      console.log(endResult);
    });
