@@ -88,7 +88,7 @@ output {
 }
 
 #filler:hover {
-   font-size: 7.4vw;
+   font-weight:lighter;
 }
 
 .op {
